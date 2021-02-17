@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Analyzer by Richa!</title>
+    <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+
+<h2>Stocks Table</h2>
+
+<table border= 1 class="table">
+    <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell"> {{ header }}</th>
+        {% endfor %}
+    </tr>
+    {% for record in data %}
+    <tr>
+        {% for col in headings %}
+        <td>{{ record[col] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
